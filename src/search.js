@@ -55,19 +55,19 @@ function search(q) {
     // console.log(str.items);
     // console.log(template);
     // Mustache.parse(template);
-    console.log("------------");
+    // console.log("------------");
     for (var i = 0; i < result.items.length; i++) {
       var item = result.items[i];
       var snippet = item.snippet;
-      console.log("************");
-      console.log("item");
-      console.log(item);
-
-      console.log("=======");
-      console.log("snippet");
-      console.log(snippet);
-      console.log("=======");
-      console.log("************");
+      // console.log("************");
+      // console.log("item");
+      // console.log(item);
+      //
+      // console.log("=======");
+      // console.log("snippet");
+      // console.log(snippet);
+      // console.log("=======");
+      // console.log("************");
       // htmlvideo += Mustache.render(template, {id: item.id.videoId,title: snippet.title, imageurl: snippet.thumbnails.high.url});
       $('#search-container').append("<h2>"+snippet.title+"</h2>"+"<br>");
       $('#search-container').append("<iframe"+" "+"id='ytplayer'"+" "+"type ='text/html'"+" "+"class='embed-responsive-item'"+" "+"src='http://www.youtube.com/embed/"+item.id.videoId+"?autoplay=0'"+" "+"width='600'"+" "+"height='450'"+" "+"frameborder='0'/>"+"<br>");
