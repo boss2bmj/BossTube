@@ -19,8 +19,6 @@ $(window).load(function() {
   });
 });
 
-
-
 function search(q) {
   $( "#search-container" ).html("");
   var q = $('#query').val();
@@ -31,8 +29,9 @@ function search(q) {
     maxResults: 9
   });
   request.execute(function(response) {
-    // console.log(response);
+    console.log(response);
     var str = JSON.stringify(response.result);
+    // var template = $('#panelTemplate').html();
     var result = response.result;
     var htmlvideo =""
     video_length = result.items.length;
@@ -46,7 +45,6 @@ function search(q) {
     }
   });
 }
-
 
 
 
