@@ -11,27 +11,30 @@ $(window).load(function() {
     search();
   });
 });
-
+// -----------------------------------------------------
 // Search for a specified string.
-function count(relo,q){
-  console.log("0999099990900990909009909");
-  if (relo > 0) {
-    console.log("77777777");
-    console.log(relo);
-    window.location.reload()
-    search(q);
-  }
-  relo++;
-  console.log(relo);
-  console.log("0999099990900990909009909");
+// function count(relo,q){
+//   console.log("0999099990900990909009909");
+//   if (relo > 0) {
+//     console.log("77777777");
+//     console.log(relo);
+//     window.location.reload()
+//     search(q);
+//   }
+//   relo++;
+//   console.log(relo);
+//   console.log("0999099990900990909009909");
+//
+// }
+//
+//
+// var relo = 0;
 
-}
-
-
-var relo = 0;
+// -----------------------------------------------------
 function search(q) {
   // $( "#search-container" ).remove();
   // var relo = 0;
+  $( "#search-container" ).html("");
   var q = $('#query').val();
   console.log(q);
   var request = gapi.client.youtube.search.list({
@@ -69,7 +72,7 @@ function search(q) {
       // console.log("=======");
       // console.log("************");
       // htmlvideo += Mustache.render(template, {id: item.id.videoId,title: snippet.title, imageurl: snippet.thumbnails.high.url});
-      $('#search-container').append("<h2>"+snippet.title+"</h2>"+"<br>");
+      $('#search-container').append("<h4>"+snippet.title+"</h4>"+"<br>");
       $('#search-container').append("<iframe"+" "+"id='ytplayer'"+" "+"type ='text/html'"+" "+"class='embed-responsive-item'"+" "+"src='http://www.youtube.com/embed/"+item.id.videoId+"?autoplay=0'"+" "+"width='600'"+" "+"height='450'"+" "+"frameborder='0'/>"+"<br>");
       // $('#search-container').append("<p>"+snippet.publishedAt+"</p>"+"<br>");
       // $('#search-container').append("<p>"+snippet.description+"</p>"+"<br>");
