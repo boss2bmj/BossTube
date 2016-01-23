@@ -50,27 +50,26 @@ function search(q) {
 
 
   request.execute(function(response) {
-    console.log(response);
+    // console.log(response);
     var str = JSON.stringify(response.result);
     // var template = $('#panelTemplate').html();
     var result = response.result;
     var htmlvideo =""
     // console.log(str.items);
-    // console.log(template);
-    // Mustache.parse(template);
+
     // console.log("------------");
     for (var i = 0; i < result.items.length; i++) {
       var item = result.items[i];
       var snippet = item.snippet;
-      // console.log("************");
-      // console.log("item");
-      // console.log(item);
-      //
-      // console.log("=======");
-      // console.log("snippet");
-      // console.log(snippet);
-      // console.log("=======");
-      // console.log("************");
+      console.log("************");
+      console.log("item");
+      console.log(item);
+
+      console.log("=======");
+      console.log("snippet");
+      console.log(snippet);
+      console.log("=======");
+      console.log("************");
       // htmlvideo += Mustache.render(template, {id: item.id.videoId,title: snippet.title, imageurl: snippet.thumbnails.high.url});
       $('#search-container').append("<h4>"+snippet.title+"</h4>"+"<br>");
       $('#search-container').append("<iframe"+" "+"id='ytplayer'"+" "+"type ='text/html'"+" "+"class='embed-responsive-item'"+" "+"src='http://www.youtube.com/embed/"+item.id.videoId+"?autoplay=0'"+" "+"width='600'"+" "+"height='450'"+" "+"frameborder='0'/>"+"<br>");
