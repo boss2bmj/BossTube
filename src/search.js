@@ -32,6 +32,7 @@ var relo = 0;
 function search(q) {
   // $( "#search-container" ).remove();
   // var relo = 0;
+  $( "#search-container" ).html("");
   var q = $('#query').val();
   console.log(q);
   var request = gapi.client.youtube.search.list({
