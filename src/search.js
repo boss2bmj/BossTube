@@ -40,10 +40,12 @@ function search(q) {
     for (var i = 0; i < video_length; i++) {
       var item = result.items[i];
       var snippet = item.snippet;
-      $('#search-container').append("<h2>"+snippet.title+"</h2>"+"<br>");
-      $('#search-container').append("<iframe"+" "+"id='ytplayer'"+" "+"type ='text/html'"+" "+"class='embed-responsive-item'"+" "+"src='http://www.youtube.com/embed/"+item.id.videoId+"?autoplay=0'"+" "+"width='600'"+" "+"height='450'"+" "+"frameborder='0'/>"+"<br>");
+      $('#search-container').append("<h3>"+snippet.title+"</h3>"+"<br>");
+      $('#search-container').append("<iframe id='ytplayer' type ='text/html' class='embed-responsive-item' src='http://www.youtube.com/embed/"+item.id.videoId+"?autoplay=0'"+" "+"width='600'"+" "+"height='450'"+" "+"frameborder='0'/>"+"<br>");
     }
   });
+
+  // onclick="Materialize.showStaggeredList('#staggered-test')
 }
 
 
